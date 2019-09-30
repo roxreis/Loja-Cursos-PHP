@@ -1,7 +1,8 @@
 
     <?php
 
-    $nomeSistema ="Loja dos Cursos"
+    $nomeSistema ="Loja dos Cursos";
+    $usuario = ["nome"=>"Rodrigo"];
 
      ?> 
 
@@ -22,16 +23,25 @@
         <h1 id="logo"><?php echo $nomeSistema; ?></h1>
      
     <ul class="nav"> 
-       <li class="nav-item">
-        <a class="nav-link" href="#">Cursos</a>
-      </li>
+      <?php if(isset($usuario) && $usuario != "") {?>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cursos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><?php echo $usuario ["nome"]; ?></a>
+        </li>
+      <?php }else { ?>
+
       <li class="nav-item">
         <a class="nav-link" href="#">Cadastro</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Login</a>
       </li>
-   
+      <li class="nav-item">
+          <a class="nav-link" href="#">Cursos</a>
+      </li>
+      <?php }?>  
     </ul>
  
     </header>
@@ -43,7 +53,7 @@
         <div class="row justify-content-around">
           <div class="col-lg-3 card text-center">
           
-            <div class="card-body">
+            <div class="card-body  ">
               <h5 class="card-title ">Hardware</h5>
               <img src= "hardware.jpg" alt= "imagem hardware">
               <p class="card-text font-weight-bold" >R$ 300,00</p>
