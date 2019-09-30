@@ -22,8 +22,8 @@
         <h1 id="logo"><?php echo $nomeSistema; ?></h1>
      
     <ul class="nav"> 
-       <li class="nav-item active">
-        <a class="nav-link" href="#">Cursos <span class="sr-only">(current)</span></a>
+       <li class="nav-item">
+        <a class="nav-link" href="#">Cursos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Cadastro</a>
@@ -33,10 +33,51 @@
       </li>
    
     </ul>
-  </div>
-</nav>
-
+ 
     </header>
+
+    
+
+    <main>
+      <section class="container mt-4">
+        <div class="row justify-content-around">
+          <div class="col-lg-3 card text-center">
+          
+            <div class="card-body">
+              <h5 class="card-title ">Hardware</h5>
+              <img src= "hardware.jpg" alt= "imagem hardware">
+              <p class="card-text font-weight-bold" >R$ 300,00</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+              
+            </div>
+        </div>
+
+        <div class="col-lg-3 card text-center">
+          
+            <div class="card-body">
+              <h5 class="card-title ">Hardware</h5>
+              <img src= "hardware.jpg" alt= "imagem hardware">
+              <p class="card-text font-weight-bold" >R$ 300,00</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+              
+            </div>
+        </div>
+
+        <div class="col-lg-3 card text-center">
+          
+            <div class="card-body">
+              <h5 class="card-title ">Hardware</h5>
+              <img src= "hardware.jpg" alt= "imagem hardware">
+              <p class="card-text font-weight-bold" >R$ 300,00</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+              
+            </div>
+        </div>
+
+      </section>
+    </main> 
+
+    
     
     
     
