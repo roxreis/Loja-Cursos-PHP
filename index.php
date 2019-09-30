@@ -55,7 +55,7 @@
           
             <div class="card-body  ">
               <h5 class="card-title ">Hardware</h5>
-              <img src= "hardware.jpg" alt= "imagem hardware">
+              <img src= "hardware.jpg" class="card-img-top" alt= "imagem hardware">
               <p class="card-text font-weight-bold" >R$ 300,00</p>
               <a href="#" class="btn btn-primary">Comprar</a>
               
@@ -66,7 +66,7 @@
           
             <div class="card-body">
               <h5 class="card-title ">Hardware</h5>
-              <img src= "hardware.jpg" alt= "imagem hardware">
+              <img src= "hardware.jpg" class="card-img-top" alt= "imagem hardware">
               <p class="card-text font-weight-bold" >R$ 300,00</p>
               <a href="#" class="btn btn-primary">Comprar</a>
               
@@ -77,7 +77,7 @@
           
             <div class="card-body">
               <h5 class="card-title ">Hardware</h5>
-              <img src= "hardware.jpg" alt= "imagem hardware">
+              <img src= "hardware.jpg" class="card-img-top" alt= "imagem hardware">
               <p class="card-text font-weight-bold" >R$ 300,00</p>
               <a href="#" class="btn btn-primary">Comprar</a>
               
