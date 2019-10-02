@@ -3,6 +3,13 @@
 
     $nomeSistema ="Loja dos Cursos";
     $usuario = ["nome"=>"Rodrigo"];
+    $produtos= [
+          ["nome"=>"Curso Hardware","preco"=>"R$"." ". 500.00,"duracao"=>"3 meses"],
+          ["nome"=>"Curso Redes","preco"=>"R$"." ". 300.00,"duracao"=>"3 meses"],
+          ["nome"=>"Curso Javascript","preco"=>"R$"." ". 600.00,"duracao"=>"3 meses"],  
+    ];
+
+    $cagtegorias = ["Cursos" , "Palestras" , "Artigos"];
 
      ?> 
 
@@ -28,7 +35,7 @@
           <a class="nav-link" href="#">Cursos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><?php echo $usuario ["nome"]; ?></a>
+          <a class="nav-link" href="#"><?php echo "Olá"." ".$usuario["nome"]; ?></a>
         </li>
       <?php }else { ?>
 
@@ -49,42 +56,44 @@
     
 
     <main>
+     
+        <nav class="nav-bar bg-dark" >
+            <ul class= "nav"> 
+            <?php foreach($categorias as $categoria){ ?>
+              <li> 
+              <a class="nav-link text-white" href="#"><?php echo $categoria; ?></a>
+              </li>
+            </ul>
+        </nav>
+
+     <?php } ?>
+
+    
       <section class="container mt-4">
         <div class="row justify-content-around">
+       
+        <?php if(isset($produtos) && $produtos != []){?>
+      
+          <?php foreach($produtos as $produto){ ?>
+
           <div class="col-lg-3 card text-center">
-          
-            <div class="card-body  ">
-              <h5 class="card-title ">Hardware</h5>
+            <div>
+              <h2><?php echo $produto["nome"];?> </h2>
               <img src= "hardware.jpg" class="card-img-top" alt= "imagem hardware">
-              <p class="card-text font-weight-bold" >R$ 300,00</p>
+              <p class="card-text font-weight-bold" ><?php echo $produto["preco"];?></p>
               <a href="#" class="btn btn-primary">Comprar</a>
               
             </div>
-        </div>
+          </div>
 
-        <div class="col-lg-3 card text-center">
-          
-            <div class="card-body">
-              <h5 class="card-title ">Hardware</h5>
-              <img src= "hardware.jpg" class="card-img-top" alt= "imagem hardware">
-              <p class="card-text font-weight-bold" >R$ 300,00</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-              
-            </div>
-        </div>
+          <?php } ?>
 
-        <div class="col-lg-3 card text-center">
-          
-            <div class="card-body">
-              <h5 class="card-title ">Hardware</h5>
-              <img src= "hardware.jpg" class="card-img-top" alt= "imagem hardware">
-              <p class="card-text font-weight-bold" >R$ 300,00</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-              
-            </div>
-        </div>
+        <?php } else { ?>
+            <h1>Nao tem produtos nesta seção :(</h1>
+        <?php } ?>
+     
 
-      </section>
+     </section> 
     </main> 
 
     
