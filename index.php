@@ -60,8 +60,8 @@
         <nav class="nav-bar bg-dark" >
             <ul class= "nav"> 
             <?php foreach($categorias as $categoria){ ?>
-              <li> 
-              <a class="nav-link text-white" href="#"><?php echo $categoria; ?></a>
+              <li class="nav-item"> 
+                <a class="nav-link text-white" href="#"><?php echo $categoria; ?></a>
               </li>
             </ul>
         </nav>
