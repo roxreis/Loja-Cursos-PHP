@@ -27,15 +27,14 @@
  
 </header>
 
- <nav class="nav bg-dark row justify-content-around">
-          <ul class= "nav"> 
+ <nav class="bg-dark">
+          <ul class= "nav d-flex justify-content-around p-2"> 
             <?php if(isset($categorias) && $categorias != []) { ?>
                 <?php foreach($categorias as $categoria) { ?>
                   <li class="nav-item"> 
                     <a class="nav-link text-white" href="#"><?php echo $categoria; ?></a>
                   </li>
-        
-        
                 <?php } ?>      
             <?php } ?>
+          </ul>
  </nav>
