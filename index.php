@@ -5,8 +5,8 @@
     $usuario = ["nome"=>"Rodrigo"];
     $produtos= [
           ["nome"=>"Curso Hardware","preco"=>"R$"." ". 500.00,"duracao"=>"3 meses", "img"=>"img/hardware.jpg"],
-          ["nome"=>"Curso Redes","preco"=>"R$"." ". 300.00,"duracao"=>"3 meses", "img"=>"img/javascript.jpg"],
-          ["nome"=>"Curso Javascript","preco"=>"R$"." ". 600.00,"duracao"=>"3 meses", "img"=>"img/redes.jpg"],  
+          ["nome"=>"Curso Redes","preco"=>"R$"." ". 300.00,"duracao"=>"3 meses", "img"=>"img/redes.jpg"],
+          ["nome"=>"Curso Javascript","preco"=>"R$"." ". 600.00,"duracao"=>"3 meses", "img"=>"img/javascript.jpg"],  
     ];
 
     $categorias = ["Cursos" , "Palestras" , "Artigos"];
@@ -24,52 +24,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Loja Virtual</title>
 </head>
+
 <body>
 
-    <header class="container d-flex justify-content-between align-items-center p-3 ">
-        <h1 id="logo"><?php echo $nomeSistema; ?></h1>
-     
-    <ul class="nav"> 
-      <?php if(isset($usuario) && $usuario != "") {?>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cursos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><?php echo "Olá"." ".$usuario["nome"]; ?></a>
-        </li>
-      <?php }else { ?>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">Cadastro</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="#">Cursos</a>
-      </li>
-      <?php }?>  
-    </ul>
- 
-    </header>
-
     
-
+<?php include_once("header.php") ?>
+    
     <main>
-     
-        <nav class="nav-bar bg-dark row justify-content-around" >
-          <ul class= "nav"> 
-            <?php if(isset($categorias) && $categorias != []) { ?>
-                <?php foreach($categorias as $categoria) { ?>
-                  <li class="nav-item"> 
-                    <a class="nav-link text-white" href="#"><?php echo $categoria; ?></a>
-                  </li>
-        
-        
-                <?php } ?>      
-            <?php } ?>
-         </nav>
-    
+           
       <section class="container mt-4">
         <div class="row justify-content-around">
           <?php if(isset($produtos) && $produtos != []){?>
