@@ -27,7 +27,7 @@
  
 </header>
 
- <nav class="nav-bar bg-dark row justify-content-around" >
+ <nav class="nav bg-dark row justify-content-around">
           <ul class= "nav"> 
             <?php if(isset($categorias) && $categorias != []) { ?>
                 <?php foreach($categorias as $categoria) { ?>
