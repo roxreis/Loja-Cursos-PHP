@@ -8,7 +8,7 @@
    function validaNome($nome){
        global $erros;
         if(strlen($nome) == 0){
-            array_push($erros, "Falta nome mané");
+            array_push($erros, "Nome incorreto ou inválido");
         }
 
     }
