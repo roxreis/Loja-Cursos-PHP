@@ -4,12 +4,12 @@
     $nomeSistema ="Loja dos Cursos";
     $usuario = ["nome"=>"Rodrigo"];
     $produtos= [
-          ["nome"=>"Curso Hardware","preco"=>"R$"." ". 500.00,"duracao"=>"3 meses"],
-          ["nome"=>"Curso Redes","preco"=>"R$"." ". 300.00,"duracao"=>"3 meses"],
-          ["nome"=>"Curso Javascript","preco"=>"R$"." ". 600.00,"duracao"=>"3 meses"],  
+          ["nome"=>"Curso Hardware","preco"=>"R$"." ". 500.00,"duracao"=>"3 meses", "img"=>"img/hardware.jpg"],
+          ["nome"=>"Curso Redes","preco"=>"R$"." ". 300.00,"duracao"=>"3 meses", "img"=>"img/javascript.jpg"],
+          ["nome"=>"Curso Javascript","preco"=>"R$"." ". 600.00,"duracao"=>"3 meses", "img"=>"img/redes.jpg"],  
     ];
 
-    $cagtegorias = ["Cursos" , "Palestras" , "Artigos"];
+    $categorias = ["Cursos" , "Palestras" , "Artigos"];
 
      ?> 
 
@@ -57,43 +57,38 @@
 
     <main>
      
-        <nav class="nav-bar bg-dark" >
-            <ul class= "nav"> 
-            <?php foreach($categorias as $categoria){ ?>
-              <li class="nav-item"> 
-                <a class="nav-link text-white" href="#"><?php echo $categoria; ?></a>
-              </li>
-            </ul>
-        </nav>
-
-     <?php } ?>
-
+        <nav class="nav-bar bg-dark row justify-content-around" >
+          <ul class= "nav"> 
+            <?php if(isset($categorias) && $categorias != []) { ?>
+                <?php foreach($categorias as $categoria) { ?>
+                  <li class="nav-item"> 
+                    <a class="nav-link text-white" href="#"><?php echo $categoria; ?></a>
+                  </li>
+        
+        
+                <?php } ?>      
+            <?php } ?>
+         </nav>
     
       <section class="container mt-4">
         <div class="row justify-content-around">
-       
-        <?php if(isset($produtos) && $produtos != []){?>
-      
-          <?php foreach($produtos as $produto){ ?>
-
-          <div class="col-lg-3 card text-center">
-            <div>
-              <h2><?php echo $produto["nome"];?> </h2>
-              <img src= "hardware.jpg" class="card-img-top" alt= "imagem hardware">
-              <p class="card-text font-weight-bold" ><?php echo $produto["preco"];?></p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-              
+          <?php if(isset($produtos) && $produtos != []){?>
+           <?php foreach($produtos as $produto){ ?>
+            <div class="col-lg-3 card text-center">
+              <div>
+                <h2><?php echo $produto["nome"];?> </h2>
+                <img src= "<?php echo $produto['img'] ?>" class="card-img-top" alt= "imagens dos produtos">
+                <p class="card-text font-weight-bold" ><?php echo $produto["preco"];?></p>
+                <a href="carrinho.php?nomeProduto= <?php echo $produto['nome']; ?>" class="btn btn-primary">Comprar</a>
+              </div>
             </div>
-          </div>
+           <?php } ?>
+          <?php } else { ?>
+              <h1>Nao tem produtos nesta seção :(</h1>
+            <?php } ?>
+        </div>
+      </section> 
 
-          <?php } ?>
-
-        <?php } else { ?>
-            <h1>Nao tem produtos nesta seção :(</h1>
-        <?php } ?>
-     
-
-     </section> 
     </main> 
 
     
