@@ -8,5 +8,5 @@
         ["nome"=>"Javascript","preco"=>"R$"." ". 600.00,"duracao"=>"3 meses", "img"=>"img/javascript.jpg"],  
     ];
 
-    $categorias = ["Cursos", "Palestras", "Artigos"];
+    $categorias = ["Cursos", "Palestras", "Artigos", "Workshop"];
 

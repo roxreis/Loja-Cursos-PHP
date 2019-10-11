@@ -28,7 +28,7 @@
 </header>
 
  <nav class="bg-dark">
-          <ul class= "nav d-flex justify-content-around p-2"> 
+          <ul class= "nav d-flex justify-content-around p-2 ml-5 mr-5"> 
             <?php if(isset($categorias) && $categorias != []) { ?>
                 <?php foreach($categorias as $categoria) { ?>
                   <li class="nav-item"> 
