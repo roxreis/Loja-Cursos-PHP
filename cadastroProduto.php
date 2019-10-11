@@ -9,6 +9,7 @@
 
         }else{
             $dadoProdutos = [];
+
             //array_push é igual
             $produtos[] = ["nome"=>$nomeProduto, "preco"=>$precoProduto, "desc"=>$descProduto, "imagem"=>$imgProduto];
 
@@ -43,13 +44,14 @@
   
   
     <?php include_once("header.php"); ?>
-    <main class="container">
-        <div class="row">
-            <div "col-12">
+
+    <main class="container w-50 p-3">
+        <div class="row m-3">
+            <div class= "col-12 text-center">
                 <h1> Cadastro de Produto </h1>
             </div>
 
-            <div class="col-12">            
+            <div class="col-12 p-2">            
                 <form action="" method= "post">
                     <div class="form-group">
                         <input type="text" class= "form-control" name="nomeProduto" placeholder= "Nome do Produto">
