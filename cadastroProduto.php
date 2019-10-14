@@ -25,6 +25,7 @@
 
         }else{
             $dadoProdutos = [];
+
             //array_push é igual
             $produtos[] = ["nome"=>$nomeProduto, "preco"=>$precoProduto, "desc"=>$descProduto, "imagem"=>$imgProduto];
             // transformando array em json
@@ -77,9 +78,10 @@
   
   
     <?php include_once("header.php"); ?>
-    <main class="container">
-        <div class="row">
-            <div "col-12">
+
+    <main class="container w-50 p-3">
+        <div class="row m-3">
+            <div class= "col-12 text-center">
                 <h1> Cadastro de Produto </h1>
             </div>
 
