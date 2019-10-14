@@ -1,4 +1,4 @@
-<?php include_once("config/variaveis.php"); ?>
+<?php include_once("variaveis.php"); ?>
 
 <header class="container d-flex justify-content-between align-items-center p-3 ">
         <h1 id="logo"><?php echo $nomeSistema; ?></h1>

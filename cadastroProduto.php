@@ -5,21 +5,55 @@
         $nomeArquivo = "produto.json";
 
         if(file_exists($nomeArquivo)){
+            //abrindo e pegando informações do arquivo
+            $arquivo = file_get_contents($nomeArquivo);
+            //transgormando json em array
+            $produtos = json_decode($arquivo, true);
+            //adicionando um novo produto na array que estava dentro do arquivo
+            $produtos[] = ["nome"=>$nomeProduto, "preco"=>$precoProduto, "desc"=>$descProduto, "imagem"=>$imgProduto];
+            $json = json_encode($produtos);
+            //salvando json dentro de um arquivo
+            $deuCerto = file_put_contents($nomeArquivo, $json); 
+            
+            if ($deuCerto) {
+                return "Deu certo!";
+            }else {
+                return "Não deu certo!";
+            }
+            var_dump($produtos);
 
 
         }else{
             $dadoProdutos = [];
             //array_push é igual
             $produtos[] = ["nome"=>$nomeProduto, "preco"=>$precoProduto, "desc"=>$descProduto, "imagem"=>$imgProduto];
+            // transformando array em json
+            $json = json_encode($produtos);
+            //salvando json dentro de um arquivo
+            $deuCerto  = file_put_contents($nomeArquivo, $json);
 
-            var_dump($produtos);
+
+            if ($deuCerto) {
+                return "Deu certo!";
+            }else {
+                return "Não deu certo!";
+            }
+           
                      
         }
 
     }
 
     if ($_POST) {
-        cadastrarProduto($_POST['nomeProduto'], $_POST['descProduto'], $_POST['imgProduto'], $_POST['precoProduto']);
+       //salvando arquivo
+       $nomeImg = $_FILES["imgProduto"]["name"];
+       $localTemp = $_FILES["imgProduto"]["tmp_name"];
+       $caminhoSalvo = "img/".$nomeImg;
+
+       $deuCerto = move_uploaded_file($localTemp,$caminhoSalvo);
+       exit;
+
+        echo cadastrarProduto($_POST['nomeProduto'], $_POST['descProduto'], $caminhoSalvo, $_POST['precoProduto']);
     }
 
 
@@ -50,7 +84,7 @@
             </div>
 
             <div class="col-12">            
-                <form action="" method= "post">
+                <form action="" method= "post" enctype="multipart/form-data">
                     <div class="form-group">
                         <input type="text" class= "form-control" name="nomeProduto" placeholder= "Nome do Produto">
                     </div>   
