@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" 
     <title>Loja Virtual</title>
 </head>
 
@@ -24,7 +25,8 @@
             <div class="col-lg-3 card text-center">
               <div>
                 <h2><?php echo $produto["nome"];?> </h2>
-                <img src= "<?php echo $produto['img'] ?>" class="card-img-top" alt= "imagens dos produtos">
+                <img src= "<?php echo $produto['imagem'] ?>" class="card-img-top" alt= "imagens dos produtos">
+                <p class="card-text font-weight-bold"><?php echo $produto["desc"] ;?> </p>
                 <p class="card-text font-weight-bold" ><?php echo $produto["preco"];?></p>
                 <a href="carrinho.php?nomeProduto= <?php echo $produto['nome']; ?>" class="btn btn-primary">Comprar</a>
               </div>

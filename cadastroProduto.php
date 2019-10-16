@@ -49,21 +49,18 @@
        //salvando arquivo
        $nomeImg = $_FILES["imgProduto"]["name"];
        $localTemp = $_FILES["imgProduto"]["tmp_name"];
-       $caminhoSalvo = "img/".$nomeImg;
+       //colocando data ao nome do arquivo
+       $dataAtual = date("d-m-y");
+
+       $caminhoSalvo = "img/".$dataAtual.$nomeImg;
 
        $deuCerto = move_uploaded_file($localTemp,$caminhoSalvo);
-       exit;
+      
 
         echo cadastrarProduto($_POST['nomeProduto'], $_POST['descProduto'], $caminhoSalvo, $_POST['precoProduto']);
     }
 
-
-    
-
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -72,6 +69,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css" 
     <title>Cadastro Produto</title>
 </head>
 <body>
@@ -81,7 +79,7 @@
 
     <main class="container w-50 p-3">
         <div class="row m-3">
-            <div class= "col-12 text-center">
+            <div class= "col-12 text-center mb-3">
                 <h1> Cadastro de Produto </h1>
             </div>
 

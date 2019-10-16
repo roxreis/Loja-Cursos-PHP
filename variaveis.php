@@ -13,5 +13,5 @@
 
     
 
-    $categorias = ["Cursos" , "Palestras" , "Artigos"];
+    $categorias = ["Cursos" , "Palestras" , "Artigos", "Workshop"];
 
