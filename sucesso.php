@@ -21,7 +21,7 @@
     validaCPF($cpf);
 
     if( count($erros) == 0){
-    echo "<h1> Olá $nomeUsuario, sua compra foi realizada com sucesso :)! </h1>";
+    echo "<h1> <br><br> Olá $nomeUsuario, sua compra foi realizada com sucesso :)! </h1>";
     }else{
         foreach($erros as $mensagemErro){
             echo "<h2>$mensagemErro</h2>";  

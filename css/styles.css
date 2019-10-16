@@ -4,11 +4,15 @@
     list-style-type: none;
 }
 
-main{
+/* main{
     height: 100%;
     background-image: url(img-css/back.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 /* background-image: url(img-css/back.jpeg); */
+
+.card{
+    background-color: darkgrey;
+}
